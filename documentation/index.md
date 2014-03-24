@@ -1,0 +1,1 @@
+See http://www.acktie.com/documentation-and-examples/passbook-scanner-ios/

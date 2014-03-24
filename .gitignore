@@ -1,0 +1,16 @@
+tmp
+bin
+build
+*.class
+*.merge-left*
+*.merge-right*
+*.mine
+*.prej
+*.pyc
+*.pyo
+*.working
+.svn
+_svn
+svn-commit*.tmp
+acktie mobile ios passbook scanner.xcodeproj/project.xcworkspace
+acktie mobile ios passbook scanner.xcodeproj/xcuserdata

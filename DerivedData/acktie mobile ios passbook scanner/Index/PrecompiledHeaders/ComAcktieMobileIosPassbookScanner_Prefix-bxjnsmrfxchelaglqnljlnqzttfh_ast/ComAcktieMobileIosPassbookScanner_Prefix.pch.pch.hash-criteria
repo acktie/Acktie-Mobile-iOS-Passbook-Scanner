@@ -1,0 +1,38 @@
+Contents of /Users/Nuzzi/development/Acktie_development/Acktie Mobile iOS Passbook Scanner/ComAcktieMobileIosPassbookScanner_Prefix.pch
+-x
+objective-c
+-arch
+i386
+-fretain-comments-from-system-headers
+-std=c99
+-fpascal-strings
+-Os
+-DTI_VERSION=
+-isysroot
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk
+-fexceptions
+-fasm-blocks
+-g
+-fobjc-abi-version=2
+-fobjc-legacy-dispatch
+-mios-simulator-version-min=4.0
+-iquote
+-iquote
+-I/Users/Nuzzi/development/Acktie_development/Acktie Mobile iOS Passbook Scanner/DerivedData/acktie mobile ios passbook scanner/Build/Products/Release-iphonesimulator/include
+-Iiphone/ZXingWidget/Classes
+-Iiphone/ZXingWidget/Classes/actions
+-Iiphone/ZXingWidget/Classes/parsedResults
+-Iiphone/ZXingWidget/Classes/resultParsers
+-Icpp/core/src
+-I/Users/Nuzzi/Library/Application Support/Titanium/mobilesdk/osx/2.1.3.GA/iphone/include
+-I/Users/Nuzzi/Library/Application Support/Titanium/mobilesdk/osx/2.1.3.GA/iphone/include/TiCore
+-F/Users/Nuzzi/development/Acktie_development/Acktie Mobile iOS Passbook Scanner/DerivedData/acktie mobile ios passbook scanner/Build/Products/Release-iphonesimulator
+-ferror-limit=10
+-working-directory=/Users/Nuzzi/development/Acktie_development/Acktie Mobile iOS Passbook Scanner
+-Xclang
+-detailed-preprocessing-record
+-DTI_POST_1_2
+i386-apple-darwin12.5.0
+"4.2.1 Compatible Apple LLVM 5.0 (clang-500.2.76)"
+SDK_PRODUCT_BUILD_VERSION=11A465
+11A465

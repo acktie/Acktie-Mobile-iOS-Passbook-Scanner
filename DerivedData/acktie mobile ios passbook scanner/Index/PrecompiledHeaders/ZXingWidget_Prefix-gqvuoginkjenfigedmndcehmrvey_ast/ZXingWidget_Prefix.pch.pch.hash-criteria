@@ -1,0 +1,25 @@
+Contents of /Users/Nuzzi/development/Acktie_development/Acktie Mobile iOS Passbook Scanner/iphone/ZXingWidget/ZXingWidget_Prefix.pch
+-x
+objective-c++
+-arch
+armv7
+-fretain-comments-from-system-headers
+-fpascal-strings
+-Os
+-isysroot
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk
+-g
+-miphoneos-version-min=4.3
+-iquote
+-iquote
+-I/Users/Nuzzi/development/Acktie_development/Acktie Mobile iOS Passbook Scanner/DerivedData/acktie mobile ios passbook scanner/Build/Products/Release-iphoneos/include
+-I../../cpp/core/src
+-F/Users/Nuzzi/development/Acktie_development/Acktie Mobile iOS Passbook Scanner/DerivedData/acktie mobile ios passbook scanner/Build/Products/Release-iphoneos
+-ferror-limit=10
+-working-directory=/Users/Nuzzi/development/Acktie_development/Acktie Mobile iOS Passbook Scanner/iphone/ZXingWidget
+-Xclang
+-detailed-preprocessing-record
+arm-apple-darwin13.0.0
+"4.2.1 Compatible Apple LLVM 5.0 (clang-500.2.79)"
+SDK_PRODUCT_BUILD_VERSION=11B508
+11B508
