@@ -68,7 +68,7 @@
   
   NSRange prefixRange = [s rangeOfString:PREFIX options:NSCaseInsensitiveSearch];
   if (prefixRange.location == 0) {
-    int restStart = /*prefixRange.location + */ prefixRange.length;
+    int restStart = /*prefixRange.location + */ (int) prefixRange.length;
     result = [[URIParsedResult alloc] initWithURLString:[[s substringFromIndex:restStart] massagedURLString]]; 
 //    return [[[URIParsedResult alloc] initWithURLString:[[s substringFromIndex:restStart] massagedURLString]]
 //            autorelease];

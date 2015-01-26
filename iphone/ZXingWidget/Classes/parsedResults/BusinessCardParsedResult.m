@@ -48,8 +48,8 @@
 
 // Convert lastname,firstname to firstname lastname.
 + (NSString *)normalizeName:(NSString*)name {
-    int comma = [name rangeOfString:@","].location;
-    if (comma != NSNotFound) {
+    int comma = (int) [name rangeOfString:@","].location;
+    if (comma != (int) NSNotFound) {
         // Format may be last,first; switch it around
         NSString* firstName = [name
             substringWithRange:NSMakeRange(comma + 1,

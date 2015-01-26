@@ -30,14 +30,14 @@
     return self;
   }
 
-  int max = [self length];
+  int max = (int) [self length];
   int startLocation = 0;
   NSMutableString *result = [NSMutableString stringWithCapacity:[self length]];
   while (backslashRange.location != NSNotFound) {
     [result appendString:[self substringWithRange:NSMakeRange(startLocation,
                                                               backslashRange.location - startLocation)]];
     [result appendFormat:@"%c", [self characterAtIndex:backslashRange.location + 1]];
-    startLocation = backslashRange.location + 2;
+    startLocation = (int) backslashRange.location + 2;
     NSRange searchRange = NSMakeRange(startLocation, max - startLocation);
     backslashRange = [self rangeOfString:@"\\" options:0 range:searchRange];
   }
@@ -55,7 +55,7 @@
   NSMutableArray *result = nil;
 
   int i = 0;
-  int max = [self length];
+  int max = (int) [self length];
   NSRange searchRange;
   NSRange foundRange;
   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
@@ -66,7 +66,7 @@
       break;
     }
 
-    int start = i = foundRange.location + foundRange.length;
+    int start = i = (int) foundRange.location + (int) foundRange.length;
     bool done = false;
     while (!done) {
       searchRange = NSMakeRange(i, max - i);
@@ -87,7 +87,7 @@
         }
         [result addObject:toBeInArray];
         [toBeInArray release];
-        i = termRange.location + termRange.length;
+        i = (int) termRange.location + (int) termRange.length;
         done = true;
       }
     }

@@ -99,7 +99,7 @@ ZXingWidgetControllerCallback(Decoder* _decoder) : decoder(_decoder) {}
   NSLog(@"decoding: image to decode is (%lu x %lu) (%lu bytes/row)", subsetWidth, subsetHeight, subsetBytesPerRow);
 #endif
   
-  ArrayRef<char> subsetData (subsetBytesPerRow * subsetHeight);
+  ArrayRef<char> subsetData ((int) subsetBytesPerRow * (int) subsetHeight);
 #if ZXING_DEBUG
   NSLog(@"allocated %lu bytes of memory", subsetBytesPerRow * subsetHeight);
 #endif
@@ -160,7 +160,7 @@ ZXingWidgetControllerCallback(Decoder* _decoder) : decoder(_decoder) {}
     //NSSet *formatReaders = [FormatReader formatReaders];
     NSSet *formatReaders = self.readers;
     Ref<LuminanceSource> source 
-      (new GreyscaleLuminanceSource(ArrayRef<char>(subsetData), subsetBytesPerRow, subsetHeight, 0, 0, subsetWidth, subsetHeight));
+      (new GreyscaleLuminanceSource(ArrayRef<char>(subsetData), (int) subsetBytesPerRow, (int) subsetHeight, 0, 0, (int) subsetWidth, (int) subsetHeight));
     subsetData = 0;
 
     Ref<Binarizer> binarizer (new HybridBinarizer(source));

@@ -192,7 +192,7 @@
     NSUInteger myLength = [self length];
     unichar c;
     while (i < myLength) {
-        i = [self vcardIndexOf:prefix startingAt:i];
+        i = [self vcardIndexOf:prefix startingAt:(int) i];
         if (i == NSNotFound) {
             break;
         }
@@ -239,7 +239,7 @@
 
         const NSUInteger matchStart = i;  // Found the start of a match here.
 
-        while ((i = [self vcardIndexOf:@"\n" startingAt:i]) != NSNotFound) {
+        while ((i = [self vcardIndexOf:@"\n" startingAt:(int) i]) != NSNotFound) {
             if (i + 1 < [self length] &&
                 ([self characterAtIndex:i + 1] == ' ' ||
                  [self characterAtIndex:i + 1] == '\t')) {
@@ -292,7 +292,7 @@
 }
 
 - (NSString *)vcardStringWithoutContinuationCRLF {
-    int length = [self length];
+    int length = (int) [self length];
     NSMutableString *result = [NSMutableString stringWithCapacity:length];
     BOOL lastWasLF = NO;
     for (int i = 0; i < length; i++) {
@@ -318,7 +318,7 @@
 }
 
 - (NSString *)vcardStringFromQuotedPrintableWithCharset:(NSString *)charset {
-    int length = [self length];
+    int length = (int) [self length];
     NSMutableData *temp = [NSMutableData dataWithCapacity:length];
     for (int i = 0; i < length; i++) {
         unichar c = [self characterAtIndex:i];
@@ -418,7 +418,7 @@
         int numReorderItems = sizeof(newOrder) / sizeof(int);
         NSMutableString *formattedName =
             [NSMutableString stringWithCapacity:[name length]];
-        int n = [components count];
+        int n = (int) [components count];
         for (int i = 0; i < numReorderItems; i++) {
             int j = newOrder[i];
             if (n > j) {

@@ -482,7 +482,7 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
   void* free_me = 0;
   if (true) { // iOS bug?
     uint8_t* tmp = baseAddress;
-    int bytes = bytesPerRow*height;
+    int bytes = (int) bytesPerRow * (int) height;
     free_me = baseAddress = (uint8_t*)malloc(bytes);
     baseAddress[0] = 0xdb;
     memcpy(baseAddress,tmp,bytes);
